@@ -125,11 +125,6 @@ public class Partida {
         return null;
     }
     public String relatorioTabuleiro() {
-    	if (tileAnterior!=null && turno.getStatus().equals("Tile_Posicionado")){
-    		return tileAnterior.toString()+"\n"+proximoTile.toString();
-    	}else if(turno.getStatus().equals("Início_Turno")){
-    		return (turnos.size() > 0) ? turnos.get(0).getTile().toString() : turno.getTile().toString();
-    	}
-    	return (turnos.size() > 0) ? turnos.get(0).getTile().toString() : turno.getTile().toString();
+    	return tabuleiro.toString();
     }
 }
